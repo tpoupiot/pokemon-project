@@ -6,7 +6,7 @@
 // - pokemon_ID,  
 // - pokemon name.
 
-[
+const pokemon = [
     {
         "base_attack": 118,
         "base_defense": 111,

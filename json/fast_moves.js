@@ -8,7 +8,7 @@
 // - stamina_loss_scaler,
 // - type
 
-[
+const fast_moves = [
     {
         "duration": 400,
         "energy_delta": 6,
