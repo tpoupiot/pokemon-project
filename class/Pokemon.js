@@ -15,24 +15,34 @@ class Pokemon {
         return `${this.name} (ID: ${this.id})`;
     }
 
-    import_pokemon() {
+    static findGeneration(id) {
+        for (const distinctGeneration in generation) {
+            if (generation[distinctGeneration].find(pokemon => pokemon.id === id)) {
+                return distinctGeneration;
+            }
+        }
+        return 0;
+    }
+
+    static import_pokemon() {
         pokemon
-            .filter(p => p.form === 'Normal')
-            .forEach(p => {
-                Object.values(generation).forEach(gen => {
-                    const resultat = gen.find(pokegen => pokegen.id === p.pokemon_id);
-                    const genActuel = Object.keys(generation).find(key => generation[key] === gen);
-                    if(resultat) {
-                        Pokemon.all_pokemon[p.pokemon_id] = new Pokemon(p.pokemon_id, p.pokemon_name, p.base_attack, p.base_defense, p.base_stamina, genActuel, 1, 0.09399999678134918);
-                    }
-                });
-            });
+        .filter(distinctPokemon => distinctPokemon.form === 'Normal')
+        .forEach(distinctPokemon => {
+            Pokemon.all_pokemon[p.pokemon_id] =
+                new Pokemon(
+                    distinctPokemon.pokemon_id,
+                    distinctPokemon.pokemon_name,
+                    distinctPokemon.base_attack,
+                    distinctPokemon.base_defense,
+                    distinctPokemon.base_stamina,
+                    Pokemon.findGeneration(distinctPokemon.pokemon_id),
+                    1,
+                    0.09399999678134918
+                );
+        });
     }
 }
 
-
-let a = new Pokemon();
-
-a.import_pokemon();
-
+console.log(Pokemon.all_pokemon);
+Pokemon.import_pokemon();
 console.log(Pokemon.all_pokemon);
