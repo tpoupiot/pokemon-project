@@ -1,6 +1,7 @@
 class Pokemon {
     static all_pokemon = {};
-    constructor(id, name, attack, defense, stamina, generation, level, multiplier) {
+
+    constructor(id, name, attack, defense, stamina, generation, level, multiplier, types = []) {
         this.id = id;
         this.name = name;
         this.base_attack = attack;
@@ -9,10 +10,11 @@ class Pokemon {
         this.generation = generation;
         this.level = level;
         this.multiplier = multiplier;
+        this.types = types;
     }
 
     toString() {
-        return `${this.name} (ID: ${this.id})`;
+        return `Nom : ${this.name}, ID : ${this.id}`;
     }
 
     static findGeneration(id) {
@@ -24,25 +26,52 @@ class Pokemon {
         return 0;
     }
 
+    static findTypes(id) {
+        let types = {}
+
+        pokemon_type
+            .filter(pokemon => pokemon.pokemon_id === id && pokemon.form === 'Normal')
+            .flatMap(pokemon => pokemon.type)
+            .forEach(type => {
+                types[type] = new Type(type);
+            });
+
+        return types;
+    }
+
     static import_pokemon() {
         pokemon
-        .filter(distinctPokemon => distinctPokemon.form === 'Normal')
-        .forEach(distinctPokemon => {
-            Pokemon.all_pokemon[p.pokemon_id] =
+        .filter(currentPokemon => currentPokemon.form === 'Normal')
+        .forEach(currentPokemon => {
+            const currentTypes = Pokemon.findTypes(currentPokemon.pokemon_id)
+
+            Object.entries(currentTypes).forEach(type => {
+                if (!Type.all_types[type[0]]) {
+                    Type.all_types[type[0]] = type[1];
+                }
+            });
+
+            Pokemon.all_pokemon[currentPokemon.pokemon_id] =
                 new Pokemon(
-                    distinctPokemon.pokemon_id,
-                    distinctPokemon.pokemon_name,
-                    distinctPokemon.base_attack,
-                    distinctPokemon.base_defense,
-                    distinctPokemon.base_stamina,
-                    Pokemon.findGeneration(distinctPokemon.pokemon_id),
+                    currentPokemon.pokemon_id,
+                    currentPokemon.pokemon_name,
+                    currentPokemon.base_attack,
+                    currentPokemon.base_defense,
+                    currentPokemon.base_stamina,
+                    Pokemon.findGeneration(currentPokemon.pokemon_id),
                     1,
-                    0.09399999678134918
+                    cp_multiplier.find(multiplier => multiplier.level === 1).multiplier,
+                    currentTypes
                 );
         });
     }
+
+    static getTypes() {
+        return [...Object.values(Type.all_types)]
+    }
 }
 
-console.log(Pokemon.all_pokemon);
 Pokemon.import_pokemon();
 console.log(Pokemon.all_pokemon);
+
+console.log(Pokemon.getTypes());

@@ -20,10 +20,10 @@ const pokemon_type = [
         "pokemon_id": 1,
         "pokemon_name": "Bulbasaur",
         "type": [
-"Grass",
-"Poison"
-]
-},
+            "Grass",
+            "Poison"
+        ]
+    },
     {
         "form": "Normal",
         "pokemon_id": 2,
