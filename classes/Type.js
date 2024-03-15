@@ -9,4 +9,7 @@ class Type {
     toString() {
         return this.type_name;
     }
+
+    // ajouter getter setter
+
 }

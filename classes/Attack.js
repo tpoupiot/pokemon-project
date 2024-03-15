@@ -16,4 +16,6 @@ class Attack {
     toString() {
         return `Nom : ${this.name}, ID : ${this.move_id}`;
     }
+
+    // ajouter getter setter
 }

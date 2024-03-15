@@ -131,6 +131,9 @@ class Pokemon {
     static getAttacks() {
         return [...Object.values(Attack.all_attacks)]
     }
+
+    // ajouter getter setter
+
 }
 
 
