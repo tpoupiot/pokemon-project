@@ -40,6 +40,8 @@ class Pokemon {
         return types;
     }
 
+
+
     static findAttacks(id) {
         let attacks = {}
 
@@ -131,7 +133,5 @@ class Pokemon {
     }
 }
 
-Pokemon.import_pokemon();
 
-console.log(Pokemon.all_pokemon);
-console.log(Attack.all_attacks);
+Pokemon.import_pokemon();
