@@ -1,25 +1,25 @@
 function getPokemonsByType(typeName) {
-    return Object.values(Pokemon.all_pokemon).filter(pokemon => pokemon.types[typeName])
+    return Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.types[typeName])
 }
 
 function getPokemonsByAttack(attackName) {
-    return Object.values(Pokemon.all_pokemon).filter(pokemon => pokemon.attacks[attackName])
+    return Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.attacks[attackName])
 }
 
 function getAttacksByType(typeName) {
-    return Object.values(Attack.all_attacks).filter(attack => attack.type === typeName)
+    return Object.values(Class_attack.all_attacks).filter(attack => attack.type === typeName)
 }
 
 function sortPokemonByName() {
-    return Object.values(Pokemon.all_pokemon).sort()
+    return Object.values(Class_pokemon.all_pokemon).sort()
 }
 
 function sortPokemonByStamina() {
-    return Object.values(Pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
+    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
 }
 
 function getWeakestEnemies(attack) {
-    return Object.values(Pokemon.all_pokemon).sort((a, b) => {
+    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => {
         let aWeaknesses = 1
         let bWeaknesses = 1
 
@@ -31,13 +31,13 @@ function getWeakestEnemies(attack) {
 }
 
 function getStrongestEnemies(attack) {
-    return Object.values(Pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
+    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
 }
 
 function getBestAttackForEnemy(name) {
     // Récupère le ou les types du pokémon
     const currentTypes = Object.values(
-        Object.values(Pokemon.all_pokemon)
+        Object.values(Class_pokemon.all_pokemon)
         .find(pokemon => pokemon.name === name).types
     );
 
@@ -57,7 +57,7 @@ function getBestAttackForEnemy(name) {
 
     return effectiveTypes
         .filter(type => type[1] === mostEffectiveTypesCoef)
-        .map(type => Type.all_types[type[0]])
+        .map(type => Class_type.all_types[type[0]])
 }
 
 

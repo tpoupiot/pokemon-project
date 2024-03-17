@@ -1,7 +1,7 @@
 // https://pogoapi.net/api/v1/pokemon_generations.json
 // Returns a json dict where each key is the generation name and the value is a list of
-// Pokemon that are from that generation. 
-// Each Pokemon entry has its name, Pokemon ID, and generation number.
+// Class_pokemon that are from that generation.
+// Each Class_pokemon entry has its name, Class_pokemon ID, and generation number.
 
 const generation = {
     "Generation 1": [
@@ -3875,7 +3875,7 @@ const generation = {
         {
             "generation_number": 7,
             "id": 772,
-            "name": "Type: Null"
+            "name": "Class_type: Null"
 },
         {
             "generation_number": 7,

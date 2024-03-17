@@ -1,8 +1,8 @@
 // http://api/v1/current_pokemon_moves.json
-// This API returns all moves that Pokemon can currently learn via catching, evolving, hatching, or using TM's.
+// This API returns all moves that Class_pokemon can currently learn via catching, evolving, hatching, or using TM's.
 // Returns a json array where each element is a dict containing :
-// - Pokemon ID, 
-// - Pokemon name, 
+// - Class_pokemon ID,
+// - Class_pokemon name,
 // - an array of charged moves, 
 // - an array of fast moves, 
 // - an array of charged moves learnable from an elite TM, 
@@ -155,7 +155,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [
             "Ember",
-            "Wing Attack",
+            "Wing Class_attack",
             "Dragon Breath"
         ],
         "fast_moves": [
@@ -178,7 +178,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [
             "Ember",
-            "Wing Attack",
+            "Wing Class_attack",
             "Dragon Breath"
         ],
         "fast_moves": [
@@ -379,7 +379,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Tackle"
         ],
         "form": "Normal",
@@ -395,7 +395,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Steel Wing"
         ],
         "form": "Normal",
@@ -413,7 +413,7 @@ const pokemon_moves = [
             "Air Cutter"
         ],
         "elite_fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Gust"
         ],
         "fast_moves": [
@@ -434,7 +434,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Tackle",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Alola",
         "pokemon_id": 19,
@@ -450,7 +450,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Tackle",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 19,
@@ -466,7 +466,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Bite",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Alola",
         "pokemon_id": 20,
@@ -482,7 +482,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Bite",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 20,
@@ -492,7 +492,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Aerial Ace",
             "Drill Peck",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [
             "Twister"
@@ -500,7 +500,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 21,
@@ -510,7 +510,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Aerial Ace",
             "Drill Run",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [
             "Twister"
@@ -575,7 +575,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Adventure_hat_2020",
         "pokemon_id": 25,
@@ -596,7 +596,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Copy_2019",
         "pokemon_id": 25,
@@ -613,7 +613,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Costume_2020",
         "pokemon_id": 25,
@@ -634,7 +634,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Fall_2019",
         "pokemon_id": 25,
@@ -653,7 +653,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Flying_5th_anniv",
         "pokemon_id": 25,
@@ -669,7 +669,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Kariyushi",
         "pokemon_id": 25,
@@ -690,7 +690,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 25,
@@ -759,7 +759,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Winter_2020",
         "pokemon_id": 25,
@@ -923,7 +923,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Horn Attack",
+            "Horn Class_attack",
             "Body Slam",
             "Sludge Bomb"
         ],
@@ -939,7 +939,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Horn Attack",
+            "Horn Class_attack",
             "Dig",
             "Sludge Bomb"
         ],
@@ -1036,7 +1036,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Ember"
         ],
         "form": "Normal",
@@ -1054,7 +1054,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Powder Snow",
             "Charm"
         ],
@@ -1078,7 +1078,7 @@ const pokemon_moves = [
             "Ember"
         ],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Fire Spin"
         ],
         "form": "Normal",
@@ -1098,7 +1098,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Pound",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 39,
@@ -1115,7 +1115,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Pound",
-            "Feint Attack",
+            "Feint Class_attack",
             "Charm"
         ],
         "form": "Normal",
@@ -1133,7 +1133,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Bite"
         ],
         "form": "Normal",
@@ -1151,7 +1151,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Bite"
         ],
         "form": "Normal",
@@ -1401,7 +1401,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Scratch",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Alola",
         "pokemon_id": 53,
@@ -1420,7 +1420,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Scratch",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 53,
@@ -2136,7 +2136,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 84,
@@ -2153,7 +2153,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Steel Wing"
         ],
         "form": "Normal",
@@ -2769,7 +2769,7 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Bulldoze",
-            "Horn Attack",
+            "Horn Class_attack",
             "Stomp"
         ],
         "elite_charged_moves": [],
@@ -2891,7 +2891,7 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Water Pulse",
-            "Horn Attack",
+            "Horn Class_attack",
             "Aqua Tail"
         ],
         "elite_charged_moves": [],
@@ -3088,7 +3088,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Horn Attack",
+            "Horn Class_attack",
             "Iron Head",
             "Earthquake"
         ],
@@ -3184,7 +3184,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Tackle"
         ],
         "form": "Normal",
@@ -3432,12 +3432,12 @@ const pokemon_moves = [
             "Ancient Power"
         ],
         "elite_charged_moves": [
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_fast_moves": [],
         "fast_moves": [
             "Fire Spin",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 146,
@@ -3751,7 +3751,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Scratch",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 161,
@@ -3766,7 +3766,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Sucker Punch"
         ],
         "form": "Normal",
@@ -3776,13 +3776,13 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Aerial Ace",
-            "Sky Attack",
+            "Sky Class_attack",
             "Night Shade"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Peck"
         ],
         "form": "Normal",
@@ -3792,14 +3792,14 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Psychic",
-            "Sky Attack",
+            "Sky Class_attack",
             "Night Shade",
             "Shadow Ball"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Extrasensory"
         ],
         "form": "Normal",
@@ -3968,7 +3968,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Pound",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 174,
@@ -4021,7 +4021,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 177,
@@ -4037,7 +4037,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Air Slash",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 178,
@@ -4289,8 +4289,8 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
-            "Wing Attack"
+            "Quick Class_attack",
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 193,
@@ -4359,7 +4359,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Snarl"
         ],
         "form": "Normal",
@@ -4376,7 +4376,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 198,
@@ -4551,7 +4551,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Fury Cutter",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 207,
@@ -4684,7 +4684,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Ice Shard",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 215,
@@ -4881,7 +4881,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Bubble",
-            "Wing Attack",
+            "Wing Class_attack",
             "Bullet Seed"
         ],
         "form": "Normal",
@@ -4891,7 +4891,7 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Brave Bird",
-            "Sky Attack",
+            "Sky Class_attack",
             "Flash Cannon"
         ],
         "elite_charged_moves": [],
@@ -4913,7 +4913,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Ember"
         ],
         "form": "Normal",
@@ -4996,7 +4996,7 @@ const pokemon_moves = [
             "Solar Beam",
             "Hyper Beam",
             "Zap Cannon",
-            "Tri Attack"
+            "Tri Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -5316,7 +5316,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Sky Attack",
+            "Sky Class_attack",
             "Hydro Pump",
             "Futuresight"
         ],
@@ -5334,7 +5334,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Sky Attack",
+            "Sky Class_attack",
             "Hydro Pump",
             "Futuresight"
         ],
@@ -5437,7 +5437,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Bullet Seed"
         ],
         "form": "Normal",
@@ -5798,7 +5798,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Bullet Seed",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 273,
@@ -5814,7 +5814,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Razor Leaf",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 274,
@@ -5833,7 +5833,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Razor Leaf",
-            "Feint Attack",
+            "Feint Class_attack",
             "Snarl"
         ],
         "form": "Normal",
@@ -5848,7 +5848,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 276,
@@ -5858,12 +5858,12 @@ const pokemon_moves = [
         "charged_moves": [
             "Aerial Ace",
             "Brave Bird",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Steel Wing"
         ],
         "form": "Normal",
@@ -5880,7 +5880,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Water Gun",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 278,
@@ -5897,7 +5897,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Water Gun",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 279,
@@ -6242,7 +6242,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Tackle"
         ],
         "form": "Normal",
@@ -6258,7 +6258,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Zen Headbutt",
             "Charm"
         ],
@@ -6276,7 +6276,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Shadow Claw",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Costume_2020",
         "pokemon_id": 302,
@@ -6292,7 +6292,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Shadow Claw",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 302,
@@ -6410,7 +6410,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Spark"
         ],
         "form": "Normal",
@@ -6446,7 +6446,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Spark",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 311,
@@ -6463,7 +6463,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Spark",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 312,
@@ -6813,7 +6813,7 @@ const pokemon_moves = [
     },
     {
         "charged_moves": [
-            "Sky Attack",
+            "Sky Class_attack",
             "Dazzling Gleam",
             "Dragon Pulse"
         ],
@@ -7183,7 +7183,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Astonish"
         ],
         "form": "Normal",
@@ -7232,7 +7232,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Hex",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 356,
@@ -7946,7 +7946,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Tackle",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 396,
@@ -7961,8 +7961,8 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
-            "Quick Attack"
+            "Wing Class_attack",
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 397,
@@ -7977,8 +7977,8 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
-            "Quick Attack"
+            "Wing Class_attack",
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 398,
@@ -8368,7 +8368,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Water Gun",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 418,
@@ -8560,7 +8560,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Pound",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 427,
@@ -8603,7 +8603,7 @@ const pokemon_moves = [
             "Brave Bird",
             "Psychic",
             "Dark Pulse",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -8625,7 +8625,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Scratch",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 431,
@@ -8724,7 +8724,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Confusion"
         ],
         "form": "Normal",
@@ -8780,7 +8780,7 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Night Shade",
-            "Sky Attack",
+            "Sky Class_attack",
             "Heat Wave"
         ],
         "elite_charged_moves": [],
@@ -8802,7 +8802,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Sucker Punch"
         ],
         "form": "Normal",
@@ -8886,7 +8886,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Counter",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 447,
@@ -9120,7 +9120,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Ice Shard",
-            "Feint Attack",
+            "Feint Class_attack",
             "Snarl"
         ],
         "form": "Normal",
@@ -9267,7 +9267,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Bug Bite",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 469,
@@ -9287,7 +9287,7 @@ const pokemon_moves = [
         ],
         "fast_moves": [
             "Razor Leaf",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 470,
@@ -9323,7 +9323,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Fury Cutter",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 472,
@@ -9355,7 +9355,7 @@ const pokemon_moves = [
             "Blizzard"
         ],
         "elite_charged_moves": [
-            "Tri Attack"
+            "Tri Class_attack"
         ],
         "elite_fast_moves": [],
         "fast_moves": [
@@ -9740,7 +9740,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Snarl",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 491,
@@ -10077,7 +10077,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Confusion",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 494,
@@ -10486,7 +10486,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Air Slash"
         ],
         "form": "Normal",
@@ -10497,7 +10497,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Heat Wave",
             "Aerial Ace",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -10513,7 +10513,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Heat Wave",
             "Hyper Beam",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -10534,7 +10534,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Spark"
         ],
         "form": "Normal",
@@ -11215,7 +11215,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Rock Smash",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 559,
@@ -11342,8 +11342,8 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
-            "Wing Attack"
+            "Quick Class_attack",
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 566,
@@ -11359,7 +11359,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Steel Wing",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 567,
@@ -11408,7 +11408,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Scratch",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 570,
@@ -11568,7 +11568,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Water Gun",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 580,
@@ -11712,7 +11712,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Take Down"
         ],
         "form": "Autumn",
@@ -11729,7 +11729,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Take Down"
         ],
         "form": "Spring",
@@ -11746,7 +11746,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Take Down"
         ],
         "form": "Summer",
@@ -11763,7 +11763,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Take Down"
         ],
         "form": "Winter",
@@ -11780,7 +11780,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Thunder Shock",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 587,
@@ -11830,7 +11830,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Astonish",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 590,
@@ -11846,7 +11846,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Astonish",
-            "Feint Attack"
+            "Feint Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 591,
@@ -12498,7 +12498,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Wing Attack"
+            "Wing Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 627,
@@ -12530,7 +12530,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Air Slash"
         ],
         "form": "Normal",
@@ -12714,7 +12714,7 @@ const pokemon_moves = [
         ],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Zen Headbutt"
         ],
         "form": "Normal",
@@ -12951,7 +12951,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Confusion"
         ],
         "form": "Aria",
@@ -12968,7 +12968,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Low Kick"
         ],
         "form": "Pirouette",
@@ -13197,7 +13197,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Feint Attack",
+            "Feint Class_attack",
             "Bubble"
         ],
         "form": "Normal",
@@ -13214,7 +13214,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Mud Slap",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 659,
@@ -13231,7 +13231,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Mud Shot",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 660,
@@ -13247,7 +13247,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Peck",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 661,
@@ -14175,7 +14175,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Thunder Shock"
         ],
         "form": "Normal",
@@ -14192,7 +14192,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Volt Switch",
             "Mud Slap"
         ],
@@ -14283,7 +14283,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Charm",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 700,
@@ -14292,14 +14292,14 @@ const pokemon_moves = [
     {
         "charged_moves": [
             "Flying Press",
-            "Sky Attack",
+            "Sky Class_attack",
             "X Scissor",
             "Power Up Punch"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Low Kick",
             "Poison Jab"
         ],
@@ -14612,7 +14612,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Wing Attack",
+            "Wing Class_attack",
             "Bite"
         ],
         "form": "Normal",
@@ -14905,7 +14905,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Drill Peck",
             "Aerial Ace",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -14921,7 +14921,7 @@ const pokemon_moves = [
         "charged_moves": [
             "Drill Peck",
             "Rock Blast",
-            "Sky Attack"
+            "Sky Class_attack"
         ],
         "elite_charged_moves": [],
         "elite_fast_moves": [],
@@ -15499,7 +15499,7 @@ const pokemon_moves = [
         ],
         "form": "Normal",
         "pokemon_id": 772,
-        "pokemon_name": "Type: Null"
+        "pokemon_name": "Class_type: Null"
     },
     {
         "charged_moves": [
@@ -16002,7 +16002,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Volt Switch",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 785,
@@ -16644,7 +16644,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Snarl"
         ],
         "form": "Normal",
@@ -16659,7 +16659,7 @@ const pokemon_moves = [
         "elite_charged_moves": [],
         "elite_fast_moves": [],
         "fast_moves": [
-            "Quick Attack",
+            "Quick Class_attack",
             "Snarl"
         ],
         "form": "Normal",
@@ -17671,7 +17671,7 @@ const pokemon_moves = [
         "elite_fast_moves": [],
         "fast_moves": [
             "Astonish",
-            "Quick Attack"
+            "Quick Class_attack"
         ],
         "form": "Normal",
         "pokemon_id": 885,
@@ -17721,7 +17721,7 @@ const pokemon_moves = [
         "fast_moves": [
             "Metal Claw",
             "Snarl",
-            "Quick Attack",
+            "Quick Class_attack",
             "Fire Fang"
         ],
         "form": "Crowned_sword",
@@ -17740,7 +17740,7 @@ const pokemon_moves = [
         "fast_moves": [
             "Metal Claw",
             "Snarl",
-            "Quick Attack",
+            "Quick Class_attack",
             "Fire Fang"
         ],
         "form": "Hero",
@@ -17759,7 +17759,7 @@ const pokemon_moves = [
         "fast_moves": [
             "Metal Claw",
             "Snarl",
-            "Quick Attack",
+            "Quick Class_attack",
             "Ice Fang"
         ],
         "form": "Crowned_shield",
@@ -17778,7 +17778,7 @@ const pokemon_moves = [
         "fast_moves": [
             "Metal Claw",
             "Snarl",
-            "Quick Attack",
+            "Quick Class_attack",
             "Ice Fang"
         ],
         "form": "Hero",

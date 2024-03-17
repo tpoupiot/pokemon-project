@@ -1,6 +1,6 @@
 // http://PoGoApi.net/api/v1/pokemon_types.json
 // Returns a json array where each element is a dict containing
-// - Pokemon ID, 
+// - Class_pokemon ID,
 // - Pokemon_name,
 // - type (an array of one or two items)
 // and optionally the form.
@@ -7870,7 +7870,7 @@ const pokemon_type = [
     {
         "form": "Normal",
         "pokemon_id": 772,
-        "pokemon_name": "Type: Null",
+        "pokemon_name": "Class_type: Null",
         "type": [
 "Normal"
 ]

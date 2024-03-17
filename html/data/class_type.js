@@ -1,4 +1,4 @@
-class Type {
+class Class_type {
     static all_types = {};
 
     constructor(type_name) {

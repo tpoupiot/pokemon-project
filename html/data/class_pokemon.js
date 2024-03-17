@@ -1,4 +1,4 @@
-class Pokemon {
+class Class_pokemon {
     static all_pokemon = {};
 
     constructor(id, name, attack, defense, stamina, generation, level, multiplier, types, attacks) {
@@ -82,11 +82,11 @@ class Pokemon {
 
     /*
     get getTypes() {
-        return [...Object.values(Type.all_types)]
+        return [...Object.values(Class_type.all_types)]
     }
 
     get getAttacks() {
-        return [...Object.values(Attack.all_attacks)]
+        return [...Object.values(Class_attack.all_attacks)]
     }
      */
 
@@ -105,7 +105,7 @@ class Pokemon {
             .filter(pokemon => pokemon.pokemon_id === id && pokemon.form === 'Normal')
             .flatMap(pokemon => pokemon.type)
             .forEach(type => {
-                types[type] = new Type(type);
+                types[type] = new Class_type(type);
             });
 
         return types;
@@ -120,7 +120,7 @@ class Pokemon {
                     const currentMove = charged_moves.find(move => move.name === chargedMove);
 
                     if (currentMove) {
-                        attacks[chargedMove] = new Attack(
+                        attacks[chargedMove] = new Class_attack(
                             currentMove.move_id,
                             currentMove.name,
                             currentMove.type,
@@ -138,7 +138,7 @@ class Pokemon {
                     const currentMove = fast_moves.find(move => move.name === fastMove);
 
                     if (currentMove) {
-                        attacks[fastMove] = new Attack(
+                        attacks[fastMove] = new Class_attack(
                             currentMove.move_id,
                             currentMove.name,
                             currentMove.type,
@@ -161,29 +161,29 @@ class Pokemon {
         pokemon
         .filter(currentPokemon => currentPokemon.form === 'Normal')
         .forEach(currentPokemon => {
-            const currentTypes = Pokemon.#findTypes(currentPokemon.pokemon_id)
-            const currentAttacks = Pokemon.#findAttacks(currentPokemon.pokemon_id)
+            const currentTypes = Class_pokemon.#findTypes(currentPokemon.pokemon_id)
+            const currentAttacks = Class_pokemon.#findAttacks(currentPokemon.pokemon_id)
 
             Object.entries(currentTypes).forEach(type => {
-                if (!Type.all_types[type[1]]) {
-                    Type.all_types[type[0]] = type[1];
+                if (!Class_type.all_types[type[1]]) {
+                    Class_type.all_types[type[0]] = type[1];
                 }
             });
 
             Object.entries(currentAttacks).forEach(attack => {
-                if (!Attack.all_attacks[attack[1]['move_id']]) {
-                    Attack.all_attacks[attack[1]['move_id']] = attack[1];
+                if (!Class_attack.all_attacks[attack[1]['move_id']]) {
+                    Class_attack.all_attacks[attack[1]['move_id']] = attack[1];
                 }
             });
 
-            Pokemon.all_pokemon[currentPokemon.pokemon_id] =
-                new Pokemon(
+            Class_pokemon.all_pokemon[currentPokemon.pokemon_id] =
+                new Class_pokemon(
                     currentPokemon.pokemon_id,
                     currentPokemon.pokemon_name,
                     currentPokemon.base_attack,
                     currentPokemon.base_defense,
                     currentPokemon.base_stamina,
-                    Pokemon.#findGeneration(currentPokemon.pokemon_id),
+                    Class_pokemon.#findGeneration(currentPokemon.pokemon_id),
                     1,
                     cp_multiplier.find(multiplier => multiplier.level === 1).multiplier,
                     currentTypes,
@@ -195,4 +195,4 @@ class Pokemon {
 }
 
 
-Pokemon.import_pokemon();
+Class_pokemon.import_pokemon();

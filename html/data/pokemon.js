@@ -7421,7 +7421,7 @@ const pokemon = [
         "base_stamina": 216,
         "form": "Normal",
         "pokemon_id": 772,
-        "pokemon_name": "Type: Null"
+        "pokemon_name": "Class_type: Null"
 },
     {
         "base_attack": 198,

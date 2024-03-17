@@ -1,4 +1,4 @@
-class Attack {
+class Class_attack {
     static all_attacks = {}
 
     constructor(id, name, type, power, duration, energy_delta, stamina_loss_scaler, critical_chance, move_speed) {
