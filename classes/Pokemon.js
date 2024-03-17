@@ -18,7 +18,6 @@ class Pokemon {
         return `Nom : ${this.name}, ID : ${this.id}`;
     }
 
-    // Getters & Setters
     get getId() {
         return this.id;
     }

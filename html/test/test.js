@@ -35,24 +35,30 @@ function getStrongestEnemies(attack) {
 }
 
 function getBestAttackForEnemy(name) {
-    const types = Object.values(Pokemon.all_pokemon)
-        .filter(pokemon => pokemon.name === name)
-        .flatMap(pokemon => Object.values(pokemon.types))
+    // Récupère le ou les types du pokémon
+    const currentTypes = Object.values(
+        Object.values(Pokemon.all_pokemon)
+        .find(pokemon => pokemon.name === name).types
+    );
 
-    const effectiveness = Object.entries(types[0].type_effectiveness)
-        .map(type=> [
-            type[0],
-            type[1] * types[1].type_effectiveness[type[0]]
-        ]);
+    let effectiveTypes;
 
-    const maxEffectiveness = effectiveness.map(i => i[1])
-        .reduce((a, b) => Math.max(a, b));
+    if (currentTypes.length === 1) {
+        effectiveTypes = Object.entries(currentTypes[0].type_effectiveness)
+            .map(type => [ type[0], type[1] ]);
+    } else {
+        effectiveTypes = Object.entries(currentTypes[0].type_effectiveness)
+            .map(type => [ type[0], type[1] * currentTypes[1].type_effectiveness[type[0]] ]);
+    }
 
-    return effectiveness
-        .filter(type => type[1] === maxEffectiveness)
+    const mostEffectiveTypesCoef = effectiveTypes
+        .map(type => type[1])
+        .reduce((currentType, otherType) => Math.max(currentType, otherType));
+
+    return effectiveTypes
+        .filter(type => type[1] === mostEffectiveTypesCoef)
         .map(type => Type.all_types[type[0]])
 }
 
 
-console.log(getWeakestEnemies('Poison'))
 console.log(getBestAttackForEnemy("Bulbasaur"))

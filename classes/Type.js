@@ -7,7 +7,7 @@ class Type {
     }
 
     toString() {
-        return this.type_name;
+        return `Type: ${this.type_name}`;
     }
 
     get getTypeName() {
