@@ -1,0 +1,60 @@
+:root {
+  --dark-blue: #273746;
+}
+
+span.Grass {
+  background-color: #9bcc50;
+}
+span.Fire {
+  background-color: #fd7d24;
+}
+span.Water {
+  background-color: #4592c4;
+}
+span.Bug {
+  background-color: #729f3f;
+}
+span.Normal {
+  background-color: #a4acaf;
+}
+span.Poison {
+  background-color: #b97fc9;
+}
+span.Electric {
+  background-color: #eed535;
+}
+span.Ground {
+  background-color: #ab9842;
+}
+span.Fairy {
+  background-color: #fdb9e9;
+}
+span.Fighting {
+  background-color: #d56723;
+}
+span.Psychic {
+  background-color: #f366b9;
+}
+span.Rock {
+  background-color: #a38c21;
+}
+span.Ghost {
+  background-color: #7b62a3;
+}
+span.Ice {
+  background-color: #51c4e7;
+}
+span.Dragon {
+  background-color: #f16e57;
+}
+span.Dark {
+  background-color: #707070;
+}
+span.Steel {
+  background-color: #9eb7b8;
+}
+span.Flying {
+  background-color: #3dc7ef;
+}
+
+/*# sourceMappingURL=global.css.map */
