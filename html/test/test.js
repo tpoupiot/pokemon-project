@@ -62,3 +62,5 @@ function getBestAttackForEnemy(name) {
 
 console.log(Class_pokemon.all_pokemon)
 console.log(getBestAttackForEnemy("Bulbasaur"))
+
+console.table([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
