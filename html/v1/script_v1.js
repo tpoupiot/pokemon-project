@@ -1,31 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    for (let i=1; i<100; i++) {
-        const randomPokemon = Class_pokemon.all_pokemon[i];
-
+    Object.values(Class_pokemon.all_pokemon).forEach(pokemon => {
         const pokemonRow = document.createElement('tr');
         pokemonRow.classList.add('pokemon__row');
 
         const pokemonId = document.createElement('td');
         pokemonId.classList.add('pokemon__row-id');
-        const stringifiedId = String(randomPokemon.getId.toString().padStart(3, '0'));
+        const stringifiedId = String(pokemon.getId.toString().padStart(3, '0'));
         pokemonId.innerHTML = "#" + stringifiedId;
 
         const pokemonName = document.createElement('td');
         pokemonName.classList.add('pokemon__row-name');
-        pokemonName.innerHTML = randomPokemon.getName;
+        pokemonName.innerHTML = pokemon.getName;
 
         const pokemonImage = document.createElement('td');
         pokemonImage.classList.add('pokemon__row-image');
-        pokemonImage.innerHTML = `<img src="../webp/sprites/${stringifiedId}MS.webp" alt="${randomPokemon.name}"/>`;
+        if (pokemon.getId < 810) {
+            pokemonImage.innerHTML = `<img src="../webp/sprites/${stringifiedId}MS.webp" alt="${pokemon.name}"/>`;
+        } else {
+            pokemonImage.innerHTML = `<img src="../webp/sprites/${pokemon.getId}.webp" alt="${pokemon.name}"/>`;
+        }
 
         const pokemonGeneration = document.createElement('td');
         pokemonGeneration.classList.add('pokemon__row-generation');
-        pokemonGeneration.innerHTML = randomPokemon.getGeneration;
+        pokemonGeneration.innerHTML = pokemon.getGeneration;
 
         const pokemonTypes = document.createElement('td');
         pokemonTypes.classList.add('pokemon__row-types');
-        pokemonTypes.innerHTML = "<div>" + Object.values(randomPokemon.getTypes).map(type => `
+        pokemonTypes.innerHTML = "<div>" + Object.values(pokemon.getTypes).map(type => `
             <span class="${type.type_name}">`
             + "<img src='../icons/" + type.type_name + ".svg' alt='" + type.type_name + "'/>"
             + type.type_name
@@ -34,15 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const pokemonStamina = document.createElement('td');
         pokemonStamina.classList.add('pokemon__row-stamina');
-        pokemonStamina.innerHTML = "<span>" + randomPokemon.getBaseStamina + "</span>";
+        pokemonStamina.innerHTML = "<span>" + pokemon.getBaseStamina + "</span>";
 
         const pokemonAttack = document.createElement('td');
         pokemonAttack.classList.add('pokemon__row-attack');
-        pokemonAttack.innerHTML = "<span>" + randomPokemon.getBaseAttack + "</span>";
+        pokemonAttack.innerHTML = "<span>" + pokemon.getBaseAttack + "</span>";
 
         const pokemonDefense = document.createElement('td');
         pokemonDefense.classList.add('pokemon__row-defense');
-        pokemonDefense.innerHTML = "<span>" + randomPokemon.getBaseDefense + "</span>";
+        pokemonDefense.innerHTML = "<span>" + pokemon.getBaseDefense + "</span>";
 
         pokemonRow.appendChild(pokemonId);
         pokemonRow.appendChild(pokemonName);
@@ -54,5 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
         pokemonRow.appendChild(pokemonDefense);
 
         document.querySelector('.pokemon__table').appendChild(pokemonRow);
-    }
+    });
 });

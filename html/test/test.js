@@ -60,5 +60,5 @@ function getBestAttackForEnemy(name) {
         .map(type => Class_type.all_types[type[0]])
 }
 
-
+console.log(Class_pokemon.all_pokemon)
 console.log(getBestAttackForEnemy("Bulbasaur"))
