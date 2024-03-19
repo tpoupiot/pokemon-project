@@ -34,12 +34,12 @@ table {
 		background-color: white;
 		transition: background-color 0.2s;
 
-		&:hover {
-			background-color: #bccce5;
-		}
-
 		&:nth-child(even) {
 			background-color: #eceef1;
+		}
+
+		&:hover {
+			background-color: #bccce5;
 		}
 	}
 }

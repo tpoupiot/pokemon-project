@@ -116,11 +116,11 @@ table tbody > tr {
   background-color: white;
   transition: background-color 0.2s;
 }
-table tbody > tr:hover {
-  background-color: #bccce5;
-}
 table tbody > tr:nth-child(even) {
   background-color: #eceef1;
+}
+table tbody > tr:hover {
+  background-color: #bccce5;
 }
 
 .pokemon__row-types span {
