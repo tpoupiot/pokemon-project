@@ -93,4 +93,30 @@ h1 > span {
   font-size: 0.4em;
 }
 
+a {
+  display: block;
+  background-color: #1e1c1c;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  max-width: min-content;
+}
+
+label {
+  position: relative;
+}
+label input {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #464141;
+  background-color: white;
+}
+
+.container div {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
 /*# sourceMappingURL=test.css.map */
