@@ -1,0 +1,90 @@
+[33mcommit c0e258d78bfccac31c6829ead092ff9122063f32[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 19 17:22:45 2024 +0100
+
+    Début du responsive pour v1
+
+[33mcommit 97462abbbc71760204c2c43ba10e4e05cf3b12cc[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 19 16:04:28 2024 +0100
+
+    Méthode -> fonction pour all_import
+
+[33mcommit 0edc38db44e4155f9beb2a23459697889d58ae0f[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 19 09:24:50 2024 +0100
+
+    Modification du scss global + ajout de la v1
+
+[33mcommit 1dc38efdea9107630e0ba4cbc3d2d9ceb7b84ff8[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Mon Mar 18 22:30:40 2024 +0100
+
+    Ajout d'icones de types + template
+
+[33mcommit 1349ebd420dea26a956f85a2833d573cd28b0e54[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Sun Mar 17 15:02:07 2024 +0100
+
+    Restructuration et ronnamges des classes conformément à la structure de rendu
+
+[33mcommit 35cdfabaebc5d681698dd915a913f0a5f291258e[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Sun Mar 17 14:58:05 2024 +0100
+
+    Revue des toStrings + de la fonction getBestAttackForEnemy dans test
+
+[33mcommit c32b5c5dff5f2ad5a446d03e745b74cdefda3ab2[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Sun Mar 17 13:40:55 2024 +0100
+
+    Ajout des accesseurs pour les classes
+
+[33mcommit 6885cadbaf5f241bbe0a1efbf02d8ed103c5c623[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Fri Mar 15 15:01:48 2024 +0100
+
+    ajout du test getBestAttackForEnemy
+
+[33mcommit f4259217a91e27337bf36dcb07cebdabc7fa7429[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Fri Mar 15 13:58:37 2024 +0100
+
+    restructuration du projet
+
+[33mcommit 7a4dffc0bf8c38943fe6345b06e57bcde2c13f2c[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Thu Mar 14 16:12:23 2024 +0100
+
+    Classe Attack fini + Ajout dans la classe Pokemon
+
+[33mcommit 0626709342a7ac5aad90677e53339c4cc60cba2d[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Thu Mar 14 13:26:26 2024 +0100
+
+    Ajout des classes Type + Attack, méthode getTypes dans la classe Pokemon
+
+[33mcommit d043bc77e08d048634bcd150def290a1a0bd2ea2[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Wed Mar 13 21:13:04 2024 +0100
+
+    Amélioration de la complexité de import_pokemon (Ajout de la fonction findGeneration)
+    + Ajout de noms auto-descriptifs
+
+[33mcommit 8b1c464c9380436476d9dc5fa0c785dc258d9f67[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 12 19:56:28 2024 +0100
+
+    ajout de la méthode de import_pokemon
+
+[33mcommit 616f2759b175e91cd269be26e49512ec08b1a5e7[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 12 16:38:33 2024 +0100
+
+    transform .json into .js + adding js files in index.html + adding style.scss
+
+[33mcommit b4e6cf2a4ab9002239bc7f57e04af8e3e957686a[m
+Author: tpoupiot <timfx35@gmail.com>
+Date:   Tue Mar 12 16:25:44 2024 +0100
+
+    first commit

@@ -19,22 +19,19 @@ function sortPokemonByStamina() {
 }
 
 function getWeakestEnemies(attack) {
-    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => {
-        let aWeaknesses = 1
-        let bWeaknesses = 1
+    const attackType = Object.values(Class_attack.all_attacks)
+        .find(currentAttack => currentAttack.name === attack).type;
 
-        Object.values(a.types).forEach(type => aWeaknesses *= type.type_effectiveness[attack])
-        Object.values(b.types).forEach(type => aWeaknesses *= type.type_effectiveness[attack])
+    return Object.values(Class_pokemon.all_pokemon).filter(pokemon => {
+       const pokTypeEffectiveness = Object.values(pokemon.types)
+           .map(type => type.type_effectiveness[attackType])
+           .reduce((acc, typeEffectiveness) => acc * typeEffectiveness, 1);
 
-        return bWeaknesses - aWeaknesses
-    })
+       return pokTypeEffectiveness < 1;
+    });
 }
 
-function getStrongestEnemies(attack) {
-    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
-}
-
-function getBestAttackForEnemy(name) {
+function getBestAttackTypesForEnemy(name) {
     // Récupère le ou les types du pokémon
     const currentTypes = Object.values(
         Object.values(Class_pokemon.all_pokemon)
@@ -60,7 +57,9 @@ function getBestAttackForEnemy(name) {
         .map(type => Class_type.all_types[type[0]])
 }
 
-console.log(Class_pokemon.all_pokemon)
-console.log(getBestAttackForEnemy("Bulbasaur"))
+///////////
 
+
+console.log(getWeakestEnemies('Thunder Shock'));
 console.table([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
