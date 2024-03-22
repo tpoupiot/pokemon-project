@@ -1,13 +1,17 @@
 function getPokemonsByType(typeName) {
-    return Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.types[typeName])
+    return (filteredPokemons => filteredPokemons.length ? filteredPokemons : "Aucun pokémon trouvé")
+    (Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.types[typeName]))
 }
 
+
 function getPokemonsByAttack(attackName) {
-    return Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.attacks[attackName])
+    return (filteredPokemons => filteredPokemons.length ? filteredPokemons : "Aucun pokémon trouvé")
+    (Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.attacks[attackName]))
 }
 
 function getAttacksByType(typeName) {
-    return Object.values(Class_attack.all_attacks).filter(attack => attack.type === typeName)
+    return (filteredAttacks => filteredAttacks.length ? filteredAttacks : "Aucune attaque trouvé")
+    (Object.values(Class_attack.all_attacks).filter(attack => attack.type === typeName))
 }
 
 function sortPokemonByName() {
@@ -15,12 +19,17 @@ function sortPokemonByName() {
 }
 
 function sortPokemonByStamina() {
-    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => a.base_stamina - b.base_stamina)
+    return Object.values(Class_pokemon.all_pokemon).sort((a, b) => b.base_stamina - a.base_stamina)
 }
 
 function getWeakestEnemies(attack) {
-    const attackType = Object.values(Class_attack.all_attacks)
-        .find(currentAttack => currentAttack.name === attack).type;
+    let attackType = "";
+    try {
+        attackType = Object.values(Class_attack.all_attacks)
+            .find(currentAttack => currentAttack.name === attack).type
+    } catch (e) {
+        return "Aucune attaque de ce nom"
+    }
 
     return Object.values(Class_pokemon.all_pokemon).filter(pokemon => {
        const pokTypeEffectiveness = Object.values(pokemon.types)
@@ -33,10 +42,14 @@ function getWeakestEnemies(attack) {
 
 function getBestAttackTypesForEnemy(name) {
     // Récupère le ou les types du pokémon
-    const currentTypes = Object.values(
-        Object.values(Class_pokemon.all_pokemon)
-        .find(pokemon => pokemon.name === name).types
-    );
+    try {
+        const currentTypes = Object.values(
+            Object.values(Class_pokemon.all_pokemon)
+                .find(pokemon => pokemon.name === name).types
+        );
+    } catch (e) {
+        return "Aucun pokémon de ce nom"
+    }
 
     let effectiveTypes;
 
@@ -50,16 +63,9 @@ function getBestAttackTypesForEnemy(name) {
 
     const mostEffectiveTypesCoef = effectiveTypes
         .map(type => type[1])
-        .reduce((currentType, otherType) => Math.max(currentType, otherType));
+        .reduce((currentType, otherType) => Math.min(currentType, otherType));
 
     return effectiveTypes
         .filter(type => type[1] === mostEffectiveTypesCoef)
         .map(type => Class_type.all_types[type[0]])
 }
-
-///////////
-
-
-console.log(getWeakestEnemies('Thunder Shock'));
-console.table([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-

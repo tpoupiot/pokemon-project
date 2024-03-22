@@ -7,12 +7,19 @@ h1 > span {
 
 a {
 	display: block;
-	background-color: #1e1c1c;
+	background-color: var(--water);
 	color: white;
 	padding: 8px 16px;
 	text-decoration: none;
 	border-radius: 8px;
 	max-width: min-content;
+	border: 2px solid var(--water);
+	transition: all 0.2s;
+
+	&:hover {
+		color: var(--water);
+		background-color: white;
+	}
 }
 label {
 	position: relative;
@@ -25,11 +32,11 @@ label {
 }
 
 
-
 .container {
 	div {
 		margin: 20px;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 20px;
 	}
 }

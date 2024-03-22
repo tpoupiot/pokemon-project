@@ -22,52 +22,45 @@
     <div class="container">
         <h1>Tests unitaires <span>(CTRL + SHIFT + i)</span></h1>
         <div>
-            <a href="">getPokemonByType</a href="">
+            <a onclick="console.table(getPokemonsByType(document.querySelector('#question1').value))">getPokemonsByType</a>
             <label>
-                <input type="text">
+                <input id="question1" type="text" placeholder="ex: Bug">
             </label>
         </div>
 
         <div>
-            <a href="">getPokemonsByAttack</a>
+            <a onclick="console.table(getPokemonsByAttack(document.querySelector('#question2').value))">getPokemonsByAttack</a>
             <label>
-                <input type="text">
+                <input id="question2" type="text" placeholder="ex: Megahorn">
             </label>
         </div>
 
         <div>
-            <a href="">getAttacksByType</a>
+            <a onclick="console.table(getAttacksByType(document.querySelector('#question3').value))">getAttacksByType</a>
             <label>
-                <input type="text">
+                <input id="question3" type="text" placeholder="ex: Dragon">
             </label>
         </div>
 
         <div>
-            <a href="">sortPokemonByName</a>
+            <a onclick="console.table(sortPokemonByName())">sortPokemonByName</a>
         </div>
 
         <div>
-            <a href="">sortPokemonByStamina</a>
+            <a onclick="console.table(sortPokemonByStamina())">sortPokemonByStamina</a>
         </div>
 
         <div>
-            <a href="">getWeakestEnemies</a>
+            <a onclick="console.table(getWeakestEnemies(document.querySelector('#question6').value))">getWeakestEnemies</a>
             <label>
-                <input type="text">
+                <input id="question6" type="text" placeholder="ex: Bulldoze">
             </label>
         </div>
 
         <div>
-            <a href="">getStrongestEnemies</a>
+            <a onclick="console.table(getBestAttackTypesForEnemy(document.querySelector('#question7').value))">getBestAttackForEnemy</a>
             <label>
-                <input type="text">
-            </label>
-        </div>
-
-        <div>
-            <a href="">getBestAttackForEnemy</a>
-            <label>
-                <input type="text">
+                <input id="question7" type="text" placeholder="ex: Pikachu">
             </label>
         </div>
     </div>
