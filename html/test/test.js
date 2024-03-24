@@ -3,7 +3,6 @@ function getPokemonsByType(typeName) {
     (Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.types[typeName]))
 }
 
-
 function getPokemonsByAttack(attackName) {
     return (filteredPokemons => filteredPokemons.length ? filteredPokemons : "Aucun pokémon trouvé")
     (Object.values(Class_pokemon.all_pokemon).filter(pokemon => pokemon.attacks[attackName]))
@@ -42,13 +41,14 @@ function getWeakestEnemies(attack) {
 
 function getBestAttackTypesForEnemy(name) {
     // Récupère le ou les types du pokémon
+    let currentTypes;
     try {
-        const currentTypes = Object.values(
+        currentTypes = Object.values(
             Object.values(Class_pokemon.all_pokemon)
                 .find(pokemon => pokemon.name === name).types
         );
     } catch (e) {
-        return "Aucun pokémon de ce nom"
+        return "Aucun pokémon de ce nom "
     }
 
     let effectiveTypes;

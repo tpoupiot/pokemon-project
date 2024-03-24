@@ -121,6 +121,7 @@ a {
   max-width: min-content;
   border: 2px solid var(--water);
   transition: all 0.2s;
+  cursor: pointer;
 }
 a:hover {
   color: var(--water);

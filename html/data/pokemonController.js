@@ -9,6 +9,9 @@ function findGeneration(id) {
 function findTypes(id) {
     let types = {}
 
+    // Dans le fichier pokemon_type, on filtre les pokemons qui ont l'id de l'argument et la forme 'Normal'
+    // Pour chaque pokemon, on récupère le type et on l'ajoute à l'objet types
+    // en créant une class type en le classant par le nom du type
     pokemon_type
         .filter(pokemon => pokemon.pokemon_id === id && pokemon.form === 'Normal')
         .flatMap(pokemon => pokemon.type)
@@ -21,6 +24,9 @@ function findTypes(id) {
 function findAttacks(id) {
     let attacks = {}
 
+    // Dans le fichier pokemon_moves, on filtre les pokemons qui ont l'id de l'argument et la forme 'Normal'
+    // Pour chaque pokemon, on récupère les attaques rapides et chargées et on les ajoute à l'objet attacks
+    // en créant une class attack en le classant par le nom de l'attaque
     pokemon_moves
         .filter(pokemon => pokemon.pokemon_id === id && pokemon.form === 'Normal')
         .forEach(move => {
@@ -64,6 +70,10 @@ function findAttacks(id) {
     return attacks
 }
 function import_pokemon() {
+
+    // Dans le fichier pokemon, on filtre les pokemons qui ont la forme 'Normal'
+    // Pour chaque pokemon, on récupère les types, les attaques et la génération
+    // On ajoute les types et les attaques à la class type et attack
     pokemon
         .filter(currentPokemon => currentPokemon.form === 'Normal')
         .forEach(currentPokemon => {

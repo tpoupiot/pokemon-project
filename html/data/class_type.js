@@ -10,6 +10,7 @@ class Class_type {
         return `Type: ${this.type_name}`;
     }
 
+    // Accesseurs
     get getTypeName() {
         return this.type_name;
     }

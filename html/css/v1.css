@@ -273,15 +273,22 @@ table tbody > tr:hover {
     position: absolute;
     width: 1px;
   }
-  table tr {
+  table tbody > tr {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: 0.625em;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  table tbody > tr:hover {
+    background: white;
   }
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
     text-align: right;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
   }
   table td::before {
     content: attr(data-label);
@@ -291,6 +298,25 @@ table tbody > tr:hover {
   }
   table td:last-child {
     border-bottom: 0;
+  }
+  table td:nth-child(even) {
+    background-color: #eceef1;
+  }
+  table td:hover {
+    background-color: #bccce5;
+  }
+  .pokemon__row-image img {
+    margin-right: 0;
+  }
+  .pokemon__row-types div {
+    justify-content: flex-end;
+  }
+  .pokemon__row-stamina span, .pokemon__row-attack span, .pokemon__row-defense span {
+    justify-content: flex-end;
+  }
+  .pokemon__row-id::before {
+    color: black;
+    opacity: 1;
   }
 }
 

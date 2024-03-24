@@ -17,6 +17,7 @@ class Class_attack {
         return `Nom : ${this.name}, ID : ${this.move_id}`;
     }
 
+    // Accesseurs
     get getId() {
         return this.move_id;
     }

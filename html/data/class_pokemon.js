@@ -18,6 +18,7 @@ class Class_pokemon {
         return `Nom : ${this.name}, ID : ${this.id}`;
     }
 
+    // Accesseurs
     get getId() {
         return this.id;
     }

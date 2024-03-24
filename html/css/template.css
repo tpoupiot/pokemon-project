@@ -138,7 +138,7 @@ table tbody > tr:hover {
   background-color: #bccce5;
 }
 
-.pokemon__row-types span {
+.pokemon__row-types div > span {
   display: inline-flex;
   align-items: center;
   color: white;
@@ -146,7 +146,7 @@ table tbody > tr:hover {
   border-radius: 50px;
   font-weight: 500;
 }
-.pokemon__row-types span img {
+.pokemon__row-types div > span img {
   width: 15px;
   height: 15px;
   margin-right: 5px;
@@ -216,6 +216,108 @@ table tbody > tr:hover {
   display: inline-flex;
   height: 15px;
   width: 15px;
+}
+
+@media screen and (max-width: 950px) {
+  thead .th__gen span {
+    display: none;
+  }
+  thead .th__gen::after {
+    content: "Gen";
+  }
+  thead .th__attack span {
+    display: none;
+  }
+  thead .th__attack::after {
+    content: "ATK";
+  }
+  thead .th__defense span {
+    display: none;
+  }
+  thead .th__defense::after {
+    content: "DEF";
+  }
+  thead .th__stamina span {
+    display: none;
+  }
+  thead .th__stamina::after {
+    content: "STA";
+  }
+  .pokemon__row-types div > span {
+    padding: 7px;
+  }
+  .pokemon__row-types .type__name {
+    display: none;
+  }
+  .pokemon__row-types .type__image {
+    margin-right: 0;
+  }
+  .pokemon__row-stamina span::after {
+    display: none;
+  }
+  .pokemon__row-attack span::after {
+    display: none;
+  }
+  .pokemon__row-defense span::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tbody > tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  table tbody > tr:hover {
+    background: white;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table td:nth-child(even) {
+    background-color: #eceef1;
+  }
+  table td:hover {
+    background-color: #bccce5;
+  }
+  .pokemon__row-image img {
+    margin-right: 0;
+  }
+  .pokemon__row-types div {
+    justify-content: flex-end;
+  }
+  .pokemon__row-stamina span, .pokemon__row-attack span, .pokemon__row-defense span {
+    justify-content: flex-end;
+  }
+  .pokemon__row-id::before {
+    color: black;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=template.css.map */
